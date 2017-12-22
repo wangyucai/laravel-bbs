@@ -14,7 +14,7 @@ class AddAvatorAndIntroductionToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('avator')->nullable;
+            $table->string('avatar')->nullable;
             $table->string('introduction')->nullable;
         });
     }
@@ -27,7 +27,7 @@ class AddAvatorAndIntroductionToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('avator');
+            $table->dropColumn('avatar');
             $table->dropColumn('introduction');
         });
     }
