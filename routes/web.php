@@ -10,4 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+/*首页*/
 Route::get('/', 'PagesController@root')->name('root');
+/*用户认证*/
+Auth::routes();
