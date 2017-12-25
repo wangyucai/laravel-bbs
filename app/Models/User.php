@@ -28,8 +28,20 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    /**
+     *  一个用户拥有多个话题
+     */
     public function topics()
     {
         return $this->hasMany(Topic::class);
     }
+
+    /**
+     * 权限控制
+     */
+     public function isAuthorOf($model)
+     {
+         return $this->id == $model->user_id;
+     }
+
 }
