@@ -16,5 +16,7 @@ Route::get('/', 'PagesController@root')->name('root');
 Auth::routes();
 /*用户个人中心*/
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
-
+/*话题*/
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+/*分类*/
+Route::resource('categories','CategoriesController',['only' => ['show']]);
